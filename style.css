@@ -12,8 +12,15 @@
     padding-left: 80px;
 }
 .nav_header {
-    padding-top: 34px;
+    padding-top: 5px;
+    padding-left: 80px;
     display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(64, 38, 14, 0.39);
+    z-index: 2;
 }
 .logo {
     width: 76px;
@@ -34,27 +41,27 @@
     color: #FFF;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     font-family: Montserrat, serif;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 700;
 }
 .btn_donate {
     margin: 0 auto;
     margin-right: 120px;
-    width: 216px;
-    height: 60px;
+    width: 239px;
+    height: 66px;
     border-radius: 36px;
     border: none;
     background: #FFD47D;
     color: #261414;
     font-family: Montserrat, serif;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 800;
 }
 .btn_nav {
     display: none;
 }
 h1 {
-    margin-top: 289px;
+    padding-top: 297px;
     margin-left: 38px;
     color: #FFF;
     font-family: Montserrat Alternates, serif;
@@ -111,37 +118,68 @@ h2 {
     font-size: 20px;
     font-weight: 500;
 }
-.container_animals {
+.swiper {
+    margin-top: 62px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 1100px;
+    height: 350px;
+}
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 350px;
+    height: 319px;
+    border: none;
+    border-radius: 17px;
+    background: #DED5C4;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.img_animals {
+    margin-left: auto;
+    margin-right: auto;
+    width: 276px;
+    height: 168px;
+}
+.text_animals {
+    color: #553A29;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 500;
+}
+.text_animals_about {
+    color: #553A29;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+}
+.btn_take {
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 }
-.list_animals {
-    display: flex;
-    width: 1000px;
-}
-.forth_back {
-    width: 83px;
-    height: 58px;
-    border-radius: 26px;
-    border: none;
-    background: #E0CCB4;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-}
-.number_page {
+.btn_animals {
     display: flex;
     justify-content: center;
-}
-.page_list {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
-.page_item {
-    border-radius: 9px;
+    align-items: center;
+    width: 175px;
+    height: 41px;
     border: none;
-    background: #E0CCB4;
+    border-radius: 70px;
+    background: #DBC1A3;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #40260E;
+    font-family: Montserrat Alternates;
+    font-size: 20px;
+    font-weight: 700;
 }
+.swiper-button-prev, .swiper-button-next{
+    color: #40260E;
+}
+
 .container_help {
     margin-top: 60px;
     margin-left: auto;
@@ -268,10 +306,14 @@ h2 {
     background: linear-gradient(180deg, rgb(252, 247, 230), rgb(252, 247, 230) 12%, rgb(226, 175, 116) 100%);
 }
 .container_footer {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
     margin-top: 52px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-content: center;
     gap: 80px;
 }
 .list_contacts {
@@ -303,6 +345,7 @@ h2 {
     border: none;
 }
 h3 {
+    text-align: center;
     color: #000;
     font-family: Montserrat, serif;
     font-size: 32px;
@@ -310,6 +353,7 @@ h3 {
     text-decoration-line: underline;
 }
 .footer_text, .footer_text_address {
+    text-align: center;
     width: 412px;
     color: #000;
     font-family: Montserrat, serif;
@@ -317,10 +361,11 @@ h3 {
     font-weight: 600;
 }
 .footer_hours {
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 330px;
+    width: 400px;
     color: #000;
     font-family: Montserrat, serif;
     font-size: 32px;
@@ -328,6 +373,7 @@ h3 {
 }
 .btn_feedback {
     display: flex;
+    justify-content: center;
 }
 #btn_feedback {
     margin-top: 40px;
@@ -358,6 +404,7 @@ h3 {
 }
 .up_btn {
     position: fixed;
+    z-index: 2;
     right: 20px;
     bottom: 30px;
     width: 63px;
@@ -387,6 +434,7 @@ h3 {
     }
     .nav_header {
         padding-top: 8px;
+        padding-left: 19px;
     }
     .logo {
         width: 49px;
@@ -419,7 +467,7 @@ h3 {
         position: fixed;
         top: 0;
         left: 200px;
-        bottom: 320px;
+        bottom: 0;
         right: 0;
         margin: 0;
         background: #C9B07C;
@@ -429,7 +477,7 @@ h3 {
         font-weight: 400;
     }
     h1 {
-        margin-top: 83px;
+        padding-top: 139px;
         margin-left: 5px;
         color: #FCF7E6;
         font-size: 30px;
@@ -463,31 +511,32 @@ h3 {
         min-height: 143px;
         font-size: 15px;
     }
-    .container_animals {
+    .swiper {
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
         display: flex;
-        justify-content: center;
-        align-content: center;
+        width: 350px;
+        height: 200px;
     }
-    .list_animals {
-        display: flex;
-        width: 400px;
+    .swiper-slide {
+        max-width: 170px;
+        height: 180px;
     }
-    .forth_back {
-        width: 83px;
-        height: 58px;
-        border-radius: 26px;
-        border: none;
-        background: #E0CCB4;
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    .img_animals {
+        width: 157px;
+        height: 95px;
     }
-    .number_page {
-        display: flex;
-        justify-content: center;
+    .text_animals {
+        font-size: 12px;
     }
-    .page_list {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
+    .text_animals_about {
+        font-size: 10px;
+    }
+    .btn_animals {
+        width: 130px;
+        height: 30px;
+        font-size: 10px;
     }
     .container_help {
         margin-top: 21px;
@@ -559,9 +608,12 @@ h3 {
         height: 41px;
         font-size: 12px;
     }
+
     .container_footer {
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 15px;
-        max-width: 400px;
+        max-width: 200px;
         gap: 15px;
     }
     .list_contacts {
@@ -577,7 +629,6 @@ h3 {
         text-align: center;
     }
     .img_text {
-        margin-left: -10px;
         gap: 7px;
     }
     .footer_list_address {
@@ -665,6 +716,7 @@ h3 {
     }
     .nav_header {
         padding-top: 21px;
+        padding-left: 24px;
     }
     .logo {
         width: 58px;
@@ -696,8 +748,8 @@ h3 {
         gap: 15px;
         position: fixed;
         top: 0;
+        left: 400px;
         bottom: 0;
-        left: 0;
         right: 0;
         margin: 0;
         background: #C9B07C;
@@ -707,7 +759,7 @@ h3 {
         font-weight: 400;
     }
     h1 {
-        margin-top: 212px;
+        padding-top: 290px;
         margin-left: 39px;
         font-size: 42px;
     }
@@ -740,31 +792,32 @@ h3 {
         min-height: 130px;
         font-size: 13px;
     }
-    .container_animals {
+    .swiper {
+        margin-top: 32px;
+        margin-left: auto;
+        margin-right: auto;
         display: flex;
-        justify-content: center;
-        align-content: center;
+        width: 640px;
+        height: 250px;
     }
-    .list_animals {
-        display: flex;
-        width: 400px;
+    .swiper-slide {
+        max-width: 200px;
+        height: 200px;
     }
-    .forth_back {
-        width: 83px;
-        height: 58px;
-        border-radius: 26px;
-        border: none;
-        background: #E0CCB4;
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    .img_animals {
+        width: 176px;
+        height: 107px;
     }
-    .number_page {
-        display: flex;
-        justify-content: center;
+    .text_animals {
+        font-size: 14px;
     }
-    .page_list {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
+    .text_animals_about {
+        font-size: 12px;
+    }
+    .btn_animals {
+        width: 175px;
+        height: 40px;
+        font-size: 14px;
     }
     .container_help {
         margin-top: 21px;
@@ -836,8 +889,10 @@ h3 {
         font-size: 20px;
     }
     .container_footer {
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 31px;
-        max-width: 700px;
+        max-width: 500px;
         gap: 15px;
     }
     .list_contacts {
@@ -853,7 +908,6 @@ h3 {
         text-align: center;
     }
     .img_text {
-        margin-left: -10px;
         gap: 7px;
     }
     .footer_list_address {

@@ -1,0 +1,164 @@
+[
+  {
+    "id": "656366a9ac1e6a40449b0a07",
+    "category": "Кот",
+    "name": "Томик",
+    "age": "2 года",
+    "sterilized": true,
+    "about": "игривый, ласковый",
+    "imageId": 0
+  },
+  {
+    "id": "656366a9de1090eddc1e57c9",
+    "category": "Пес",
+    "name": "Нейт",
+    "age": "4 года",
+    "sterilized": true,
+    "about": "спокойный, послушный",
+    "imageId": 1
+  },
+  {
+    "id": "656366a9c8a3ee9d900ec37d",
+    "category": "Кот",
+    "name": "Марсик",
+    "age": "3 месяца",
+    "sterilized": false,
+    "about": "озорной, любвеобильный",
+    "imageId": 2
+  },
+  {
+    "id": "656366a927dae3a9322e0a06",
+    "category": "Кот",
+    "name": "Рыжик",
+    "age": "3 года",
+    "sterilized": true,
+    "about": "любит поспать, разговорчивый",
+    "imageId": 3
+  },
+  {
+    "id": "656366a91332ab60de1f212d",
+    "category": "Кошка",
+    "name": "Бусинка",
+    "age": "4 месяца",
+    "sterilized": false,
+    "about": "любит поиграть, послушная",
+    "imageId": 4
+  },
+  {
+    "id": "656366a9f24288ea5ad1ef93",
+    "category": "Собака",
+    "name": "Альба",
+    "age": "4 года",
+    "sterilized": false,
+    "about": "любит гулять, игривая",
+    "imageId": 5
+  },
+  {
+    "id": "656366a99275a02fd0d38fde",
+    "category": "Пес",
+    "name": "Бублик",
+    "age": "7 y.o.",
+    "sterilized": false,
+    "about": "скромный, тактильный",
+    "imageId": 6
+  },
+  {
+    "id": "65637b578db8a601e487f805",
+    "category": "Кошка",
+    "name": "Искорка",
+    "age": "6 месяцев",
+    "sterilized": false,
+    "about": "аккуратная, ласковая",
+    "imageId": 7
+  },
+  {
+    "id": "65637b57a89161e6214a9e46",
+    "category": "Кот",
+    "name": "Барсик",
+    "age": "4 года",
+    "sterilized": false,
+    "about": "умный, любит поспать",
+    "imageId": 8
+  },
+  {
+    "id": "65637b57ba2bbd7f5f35dbf3",
+    "category": "Кошка",
+    "name": "Муся",
+    "age": "1 год",
+    "sterilized": false,
+    "about": "смешная, тактильная",
+    "imageId": 9
+  },
+  {
+    "id": "65637b575bd98ad01df10b9b",
+    "category": "Собака",
+    "name": "Грета",
+    "age": "2 месяца",
+    "sterilized": false,
+    "about": "послушная, милая",
+    "imageId": 10
+  },
+  {
+    "id": "65637b5700250b799791271f",
+    "category": "Пёс",
+    "name": "Филя",
+    "age": "5 лет",
+    "sterilized": true,
+    "about": "понимающий, любит помогать",
+    "imageId": 11
+  },
+  {
+    "id": "65637b57e93079ea14e78528",
+    "category": "Кот",
+    "name": "Сёма",
+    "age": "1 месяц",
+    "sterilized": false,
+    "about": "ласковый, любит поиграть",
+    "imageId": 12
+  },
+  {
+    "id": "65637b5702b5687fbe491926",
+    "category": "Кот",
+    "name": "Джери",
+    "age": "9 месяцев",
+    "sterilized": false,
+    "about": "любит поспать, тактильный",
+    "imageId": 13
+  },
+  {
+    "id": "65637b57082c3df01521183b",
+    "category": "Кот",
+    "name": "Кузя",
+    "age": "6 лет",
+    "sterilized": true,
+    "about": "спокойный, послушный",
+    "imageId": 14
+  },
+  {
+    "id": "65637e199e255819320acbca",
+    "category": "Пёс",
+    "name": "Рой",
+    "age": "7 месяцев",
+    "sterilized": false,
+    "about": "активный, любит гулять",
+    "imageId": 15
+  },
+  {
+    "id": "65637e19a6e36f0e44dd7fe4",
+    "category": "Пёс",
+    "name": "Абрам",
+    "age": "2 года",
+    "sterilized": false,
+    "about": "понимающий, послушный",
+    "imageId": 16
+  },
+  {
+    "id": "65637e198cdc3efa2405897c",
+    "category": "Кот",
+    "name": "Дымок",
+    "age": "6 месяцев",
+    "sterilized": false,
+    "about": "озорной, игривый",
+    "imageId": 17
+  }
+]

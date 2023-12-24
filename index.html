@@ -1,240 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Montserrat:wght@100;400&display=swap"
-      rel="stylesheet"
-    />
-    <title>Остров тепла</title>
-  </head>
-  <body>
-    <div class="up_btn up_btn_none">
-      <img src="image/up.png" alt="Up" />
-    </div>
-    <header class="page_header">
-      <div class="nav_header">
-        <img class="logo" src="image/logo.png" alt="Логотип" />
-        <nav id="nav" class="navigation_header">
-          <ul class="navigation_list">
-            <li>
-              <a class="navigation_title" href="#title_about">О приюте</a>
-            </li>
-            <li>
-              <a class="navigation_title" href="#title_help">Помочь нам</a>
-            </li>
-            <li>
-              <a class="navigation_title" href="#title_contacts">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <button id="nav_btn" class="btn_nav">
-          <img id="nav_btn_img" src="image/menu.png" alt="Menu" />
-        </button>
-        <button
-          class="btn_donate"
-          onclick="document.location='https://t.me/CozyIsland_bot'"
-          type="button"
-        >
-          Пожертвовать
-        </button>
-      </div>
-      <div class="container_header">
-        <ul>
-          <li>
-            <h1>Островок тепла</h1>
-          </li>
-          <li>
-            <p id="text_header">
-              Мы помогаем животным, оставшимся без теплого уголка, обрести дом и
-              почувствовать себя любимыми.
-            </p>
-          </li>
-        </ul>
-      </div>
-    </header>
-    <main class="page_main">
-      <div class="container_main_info">
-        <h2 id="title_about">О нашем приюте</h2>
-        <ul class="block_list">
-          <li class="block_item"><img src="image/main_picture1.png" /></li>
-          <li class="block_item">
-            <p class="block_text">
-              Приют для животных - это особое место, где брошенные, бездомные
-              или потерявшие своих хозяев питомцы находят временное пристанище и
-              возможность найти новый дом и любящую семью. В нашем приюте мы
-              обеспечиваем животным безопасное и комфортное проживание.
-            </p>
-          </li>
-          <li class="block_item">
-            <p class="block_text">
-              Мы предоставляем профессиональную ветеринарную помощь животным.
-              Осуществляем профилактику заболеваний, проводим регулярные осмотры
-              и лечение животных, которые нуждаются в медицинской помощи.
-              Заботимся о заведении медицинской истории каждого питомца.
-            </p>
-          </li>
-          <li class="block_item"><img src="image/main_picture2.png" /></li>
-        </ul>
-      </div>
-      <div class="container_main_animals">
-        <h2 id="title_animals">Ищут дом</h2>
-        <div class="swiper">
-          <div class="swiper-wrapper"></div>
 
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Montserrat:wght@100;400&display=swap"
+    rel="stylesheet" />
+  <title>Остров тепла</title>
+</head>
+
+<body>
+  <div class="up_btn up_btn_none">
+    <img src="image/up.png" alt="Up" />
+  </div>
+  <header class="page_header">
+    <div class="nav_header">
+      <img class="logo" src="image/logo.png" alt="Логотип" />
+      <nav id="nav" class="navigation_header">
+        <ul class="navigation_list">
+          <li>
+            <a class="navigation_title" href="#title_about">О приюте</a>
+          </li>
+          <li>
+            <a class="navigation_title" href="#title_help">Помочь нам</a>
+          </li>
+          <li>
+            <a class="navigation_title" href="#title_contacts">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <button id="nav_btn" class="btn_nav">
+        <img id="nav_btn_img" src="image/menu.png" alt="Menu" />
+      </button>
+      <button id="btn_donate" class="btn" onclick="document.location='https://t.me/CozyIsland_bot'" type="button">
+        <span class="tooltiptext">Переход в наш телеграм-бот, где Вы можете: <br>- подать заявку на волонтерство<br>-
+          запросить просмотр питомцев<br>- прочитать отзывы.</span>
+        Пожертвовать
+      </button>
+    </div>
+    <div class="container_header">
+      <ul>
+        <li>
+          <h1>Островок тепла</h1>
+        </li>
+        <li>
+          <p id="text_header">
+            Мы помогаем животным, оставшимся без теплого уголка, обрести дом и
+            почувствовать себя любимыми.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main class="page_main">
+    <div class="container_main_info">
+      <h2 id="title_about">О нашем приюте</h2>
+      <ul class="block_list">
+        <li class="block_item"><img src="image/main_picture1.png" /></li>
+        <li class="block_item">
+          <p class="block_text">
+            Приют для животных - это особое место, где брошенные, бездомные
+            или потерявшие своих хозяев питомцы находят временное пристанище и
+            возможность найти новый дом и любящую семью. В нашем приюте мы
+            обеспечиваем животным безопасное и комфортное проживание.
+          </p>
+        </li>
+        <li class="block_item">
+          <p class="block_text">
+            Мы предоставляем профессиональную ветеринарную помощь животным.
+            Осуществляем профилактику заболеваний, проводим регулярные осмотры
+            и лечение животных, которые нуждаются в медицинской помощи.
+            Заботимся о заведении медицинской истории каждого питомца.
+          </p>
+        </li>
+        <li class="block_item"><img src="image/main_picture2.png" /></li>
+      </ul>
+    </div>
+    <div class="container_main_animals">
+      <h2 id="title_animals">Ищут дом</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper"></div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+    <div class="container_main_help">
+      <h2 id="title_help">Как Вы можете нам помочь</h2>
+      <div class="container_help">
+        <ul class="list_help">
+          <li class="list_help_title">Мы принимаем помощь в виде:</li>
+          <li class="list_help_item">
+            <img class="small_img_help" src="image/dollar.png" />
+            <p class="help_text">денежного пожертвования</p>
+          </li>
+          <li class="list_help_item">
+            <img class="small_img_help" src="image/food.png" />
+            <p class="help_text">
+              кормов и<br />
+              консервов
+            </p>
+          </li>
+          <li class="list_help_item">
+            <img class="small_img_help" src="image/medicines.png" />
+            <p class="help_text">лекарств</p>
+          </li>
+          <li class="list_help_item">
+            <img class="small_img_help" src="image/household.png" />
+            <p class="help_text">
+              предметов для<br />
+              бытовых нужд
+            </p>
+          </li>
+          <li class="list_help_btn">
+            <button id="btn_help" class="btn" onclick="document.location='https://t.me/CozyIsland_bot'" type="button">
+              <span class="tooltiptext">Переход в наш телеграм-бот, где Вы можете: <br>- подать заявку на
+                волонтерство<br>- запросить просмотр питомцев<br>- прочитать отзывы.</span>
+              Помочь
+            </button>
+          </li>
+        </ul>
+        <div>
+          <img class="img_help" src="image/dog.png" />
         </div>
       </div>
-      <div class="container_main_help">
-        <h2 id="title_help">Как Вы можете нам помочь</h2>
-        <div class="container_help">
-          <ul class="list_help">
-            <li class="list_help_title">Мы принимаем помощь в виде:</li>
-            <li class="list_help_item">
-              <img class="small_img_help" src="image/dollar.png" />
-              <p class="help_text">денежного пожертвования</p>
+    </div>
+    <div class="container_main_merch">
+      <h2 id="title_merch">Мерч продукция</h2>
+      <p class="merch_text">
+        Также Вы можете приобрести нашу продукцию: Все средства, вырученные с
+        продажи данной продукции, идут на поддержание фонда нашего приюта.
+      </p>
+      <ul class="merch_list">
+        <li><img class="merch_item" src="image/cup.png" alt="Cup" /></li>
+        <li>
+          <img class="merch_item" src="image/shopper.png" alt="Shopper" />
+        </li>
+        <li>
+          <img class="merch_item" src="image/notepad.png" alt="Notepad" />
+        </li>
+      </ul>
+      <div class="btn_more_info">
+        <button id="btn_more_info" class="btn" onclick="document.location='https://t.me/CozyIsland_bot'" type="button">
+          <span class="tooltiptext">Переход в наш телеграм-бот, где Вы можете: <br>- подать заявку на волонтерство<br>-
+            запросить просмотр питомцев<br>- прочитать отзывы.</span>
+          Узнать подробнее
+        </button>
+      </div>
+    </div>
+  </main>
+  <footer class="page_footer">
+    <h2 id="title_contacts">Контакты</h2>
+    <div class="container_footer">
+      <ul class="list_contacts">
+        <li>
+          <h3>Как связаться с нами:</h3>
+        </li>
+        <li class="footer_item">
+          <div class="img_text">
+            <img class="img_email" src="image/email.png" alt="Email" />
+            <p class="footer_text">island_of_warm@mail.ru</p>
+          </div>
+        </li>
+        <li class="footer_item">
+          <ul class="logo_list">
+            <li>
+              <button class="logo_item" onclick="document.location='https://t.me/CozyIsland_bot'">
+                <img class="img_logo" src="image/telegram.png" alt="Telegram" />
+              </button>
             </li>
-            <li class="list_help_item">
-              <img class="small_img_help" src="image/food.png" />
-              <p class="help_text">
-                кормов и<br />
-                консервов
-              </p>
-            </li>
-            <li class="list_help_item">
-              <img class="small_img_help" src="image/medicines.png" />
-              <p class="help_text">лекарств</p>
-            </li>
-            <li class="list_help_item">
-              <img class="small_img_help" src="image/household.png" />
-              <p class="help_text">
-                предметов для<br />
-                бытовых нужд
-              </p>
-            </li>
-            <li class="list_help_btn">
-              <button
-                class="btn_help"
-                onclick="document.location='https://t.me/CozyIsland_bot'"
-                type="button"
-              >
-                Помочь
+            <li>
+              <button class="logo_item">
+                <img class="img_logo" src="image/vk.png" alt="VKontakte" />
               </button>
             </li>
           </ul>
-          <div>
-            <img class="img_help" src="image/dog.png" />
+        </li>
+      </ul>
+      <ul class="footer_list_address">
+        <li>
+          <h3>Наш адрес:</h3>
+        </li>
+        <li class="footer_item">
+          <div class="img_text">
+            <img class="img_map" src="image/map.png" alt="Adress" />
+            <p class="footer_text_address">
+              г. Санкт-Петербург, ул. Кошкина, д.188
+            </p>
           </div>
-        </div>
-      </div>
-      <div class="container_main_merch">
-        <h2 id="title_merch">Мерч продукция</h2>
-        <p class="merch_text">
-          Также Вы можете приобрести нашу продукцию: Все средства, вырученные с
-          продажи данной продукции, идут на поддержание фонда нашего приюта.
-        </p>
-        <ul class="merch_list">
-          <li><img class="merch_item" src="image/cup.png" alt="Cup" /></li>
-          <li>
-            <img class="merch_item" src="image/shopper.png" alt="Shopper" />
-          </li>
-          <li>
-            <img class="merch_item" src="image/notepad.png" alt="Notepad" />
-          </li>
-        </ul>
-        <div class="btn_more_info">
-          <button
-            id="btn_more_info"
-            onclick="document.location='https://t.me/CozyIsland_bot'"
-            type="button"
-          >
-            Узнать подробнее
-          </button>
-        </div>
-      </div>
-    </main>
-    <footer class="page_footer">
-      <h2 id="title_contacts">Контакты</h2>
-      <div class="container_footer">
-        <ul class="list_contacts">
-          <li><h3>Как связаться с нами:</h3></li>
-          <li class="footer_item">
-            <div class="img_text">
-              <img class="img_email" src="image/email.png" alt="Email" />
-              <p class="footer_text">island_of_warm@mail.ru</p>
-            </div>
-          </li>
-          <li class="footer_item">
-            <ul class="logo_list">
-              <li>
-                <button
-                  class="logo_item"
-                  onclick="document.location='https://t.me/CozyIsland_bot'"
-                >
-                  <img
-                    class="img_logo"
-                    src="image/telegram.png"
-                    alt="Telegram"
-                  />
-                </button>
-              </li>
-              <li>
-                <button class="logo_item">
-                  <img class="img_logo" src="image/vk.png" alt="VKontakte" />
-                </button>
-              </li>
-              <li>
-                <button class="logo_item">
-                  <img class="img_logo" src="image/inst.png" alt="Instagram" />
-                </button>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <ul class="footer_list_address">
-          <li><h3>Наш адрес:</h3></li>
-          <li class="footer_item">
-            <div class="img_text">
-              <img class="img_map" src="image/map.png" alt="Adress" />
-              <p class="footer_text_address">
-                г. Санкт-Петербург, ул. Кошкина, д.188
-              </p>
-            </div>
-          </li>
-        </ul>
-        <ul class="footer_hours">
-          <li>Режим работы:</li>
-          <li>ПН-ПТ: 10.00-19.00</li>
-          <li>СБ-ВС: 15.00-20.00</li>
-          <li>
-            <div class="btn_feedback">
-              <button
-                id="btn_feedback"
-                onclick="document.location='https://t.me/CozyIsland_bot'"
-                type="button"
-              >
-                <p class="feedback_text">Оценить приют</p>
-                <img class="img_star" src="image/star.png" alt="Star" />
-              </button>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
-  </body>
+        </li>
+      </ul>
+      <ul class="footer_hours">
+        <li>Режим работы:</li>
+        <li>ПН-ПТ: 10.00-19.00</li>
+        <li>СБ-ВС: 15.00-20.00</li>
+        <li>
+          <div class="btn_feedback">
+            <button id="btn_feedback" class="btn" onclick="document.location='https://t.me/CozyIsland_bot'"
+              type="button">
+              <span class="tooltiptext">Переход в наш телеграм-бот, где Вы можете: <br>- подать заявку на
+                волонтерство<br>- запросить просмотр питомцев<br>- прочитать отзывы.</span>
+              <p class="feedback_text">Оценить приют</p>
+              <img class="img_star" src="image/star.png" alt="Star" />
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
 </html>

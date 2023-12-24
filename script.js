@@ -3,6 +3,7 @@ const nav_btn = document.querySelector("#nav_btn");
 const nav_btn_img = document.querySelector("#nav_btn_img");
 const nav_title = document.querySelectorAll(".navigation_title");
 const up_btn = document.querySelector(".up_btn");
+const elem = document.querySelector(".swiper-wrapper");
 
 nav_btn.onclick = () => {
   if (nav.classList.toggle("open")) {
@@ -193,67 +194,92 @@ window.addEventListener("scroll", () => {
 //   },
 // ];
 
-let pets;
-fetch('http://localhost:8080/getPets', {
-  method: "GET"
+let pets = [];
+
+async function getPets() {
+  const res = await fetch('http://localhost:8080/getPets', {
+      method: "GET"
   })
-.then(response => {
-  pets = response.json()
-})
 
-const elem = document.querySelector(".swiper-wrapper");
-pets.forEach((element) => {
-  let html = `<div class="swiper-slide">
-    <img class="img_animals" src=${element.imageId}>
-    <p class="text_animals">${element.name}</p>
-    <p class="text_animals">${element.age}</p>
-    <p class="text_animals_about">${element.about}</p>
-    <div class="btn_take">
-    <button id="btn_animals" class="btn" onclick="document.location='https://t.me/CozyIsland_bot'">
-    <span class="tooltiptext">Переход в наш телеграм-бот, где Вы можете: <br>- подать заявку на волонтерство<br>- запросить просмотр питомцев<br>- прочитать отзывы.</span>
-    Забрать</button>
-    </div>
-    </div>`;
-  elem.insertAdjacentHTML("beforeend", html);
-});
-const pageWidth = document.documentElement.scrollWidth;
-if (pageWidth > 700) {
-  const swiper = new Swiper(".swiper", {
-    direction: "horizontal",
-    loop: true,
-    spaceBetween: 30,
-    slidesPerView: 3,
-    slidesPerGroup: 3,
-
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-} else if (pageWidth <= 400) {
-  const swiper = new Swiper(".swiper", {
-    direction: "horizontal",
-    loop: true,
-    spaceBetween: 10,
-    slidesPerView: 2,
-    slidesPerGroup: 2,
-
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-} else {
-  const swiper = new Swiper(".swiper", {
-    direction: "horizontal",
-    loop: true,
-    spaceBetween: 20,
-    slidesPerView: 3,
-    slidesPerGroup: 3,
-
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+  return res.json()
 }
+
+async function load() {
+  try {
+    const response = await getPets();
+    pets = response;
+    console.log(1);
+  } catch (error) {
+    console.error("Error fetching pets:", error);
+  }
+}
+
+function setPets() {
+  pets.forEach((element) => {
+    let html = `<div class="swiper-slide">
+      <img class="img_animals" src=${element.imageId}>
+      <p class="text_animals">${element.name}</p>
+      <p class="text_animals">${element.age}</p>
+      <p class="text_animals_about">${element.about}</p>
+      <div class="btn_take">
+      <button id="btn_animals" class="btn" onclick="document.location='https://t.me/CozyIsland_bot'">
+      <span class="tooltiptext">Переход в наш телеграм-бот, где Вы можете: <br>- подать заявку на волонтерство<br>- запросить просмотр питомцев<br>- прочитать отзывы.</span>
+      Забрать</button>
+      </div>
+      </div>`;
+    elem.insertAdjacentHTML("beforeend", html);
+  });
+  console.log(2);
+}
+
+
+async function main() {
+  await load();
+  setPets();
+
+  // Весь ваш код, который зависит от переменной pets
+  const pageWidth = document.documentElement.scrollWidth;
+  if (pageWidth > 700) {
+    const swiper = new Swiper(".swiper", {
+      direction: "horizontal",
+      loop: true,
+      spaceBetween: 30,
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+  
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  } else if (pageWidth <= 400) {
+    const swiper = new Swiper(".swiper", {
+      direction: "horizontal",
+      loop: true,
+      spaceBetween: 10,
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+  
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  } else {
+    const swiper = new Swiper(".swiper", {
+      direction: "horizontal",
+      loop: true,
+      spaceBetween: 20,
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+  
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  }
+}
+
+// Вызываем основную функцию
+main();
